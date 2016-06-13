@@ -3,7 +3,9 @@ Learning - java 1.8, maven 3.3 docker image for building java applications in do
 #Creating the image
 ```
 $ sudo docker pull ubuntu
+```
 Create a container from the Ubuntu image:
+```
 $ sudo docker run -it --name javaimg ubuntu:latest
 ```
 #Manually installing java in the container
@@ -27,8 +29,7 @@ sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/oracle_jdk8
 sudo update-alternatives --config java
 sudo update-alternatives --config javac
 ```
-Create a file /etc/profile.d/oraclejdk.sh, and replace the contents from the file in this repository
-Next, Set the paths by running
+Create a file /etc/profile.d/oraclejdk.sh, and replace the contents from the file in this repository and set the paths by running
 ```
 source /etc/profile.d/oraclejdk.sh
 ```
