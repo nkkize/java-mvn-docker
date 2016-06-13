@@ -52,6 +52,7 @@ Set the maven path
 ```
 export PATH=/usr/lib/maven/bin:$PATH
 ```
+#Commit the changes and Push the image
 Exit from the container and commit the changes in a new image
 ```
 docker commit -m "maven and java added" -a "{author name}" {container_id} {new_image_name}:{tag}
