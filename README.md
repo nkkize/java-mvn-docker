@@ -1,6 +1,6 @@
-#java-mvn-docker
+# java-mvn-docker
 Learning - java 1.8, maven 3.3 docker image for building java applications in docker.
-#Creating the image
+# Creating the image
 ```
 $ sudo docker pull ubuntu
 ```
@@ -10,7 +10,7 @@ $ sudo docker run -it --name ${container_name} ubuntu:latest
 eg.
 $ sudo docker run -it --name javaimg ubuntu:latest
 ```
-#Manually installing java in the container
+# Manually installing java in the container
 Create a folder /java in container you just created
 ```
 mkdir /java
@@ -40,7 +40,7 @@ Create a file /etc/profile.d/oraclejdk.sh, replace the contents from the file in
 source /etc/profile.d/oraclejdk.sh
 ```
 
-#Manually installing maven in the container
+# Manually installing maven in the container
 Create a folder /maven in container you just created
 ```
 mkdir /maven
@@ -67,7 +67,7 @@ Verify by checking maven version
 mvn -v
 ```
 
-#Commit the changes and Push the image
+# Commit the changes and Push the image
 Exit from the container and commit the changes in a new image
 ```
 docker commit -m "maven and java added" -a "{author name}" {container_id} {new_image_name}:{tag}
